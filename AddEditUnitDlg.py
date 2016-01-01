@@ -60,7 +60,6 @@ class AddEditUnitDlg(IdentUI.AddEditUnitDlg):
     def OnThreatChoiceSelect(self, event):
         selectedIndex = self.m_ThreatChoice.GetSelection()
         self.m_RangeTxt.SetValue(self.threats[selectedIndex][1])
-        pass
 
     def OnRangeTxtEnter(self, event):
         selectedIndex = self.m_ThreatChoice.GetSelection()
@@ -68,7 +67,11 @@ class AddEditUnitDlg(IdentUI.AddEditUnitDlg):
             self.threats[selectedIndex][1] = self.m_RangeTxt.GetValue()
 
     def OnImgListSelect(self, event):
-        pass
+        imgSel = self.m_ImgList.GetSelections()
+        if len(imgSel) > 0:
+            self.m_RemoveImgBtn.Enable(True)
+        else:
+            self.m_RemoveImgBtn.Enable(False)
 
     def OnAddImgBtnClick(self, event):
         dlg = wx.FileDialog(None, message='Select Image File', wildcard='JPEG Files (*.jpg)|*.jpg',
@@ -80,4 +83,5 @@ class AddEditUnitDlg(IdentUI.AddEditUnitDlg):
                 self.m_ImgList.Append(img)
 
     def OnRemoveImgBtnClick(self, event):
+        imgSel = self.m_ImgList.GetSelections()
         pass
