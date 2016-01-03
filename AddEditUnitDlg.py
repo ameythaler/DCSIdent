@@ -16,7 +16,6 @@ class AddEditUnitDlg(IdentUI.AddEditUnitDlg):
         self.m_ThreatsList.Set(self.app.threats)
         self.m_NationalityList.Set(self.app.nationalities)
         self.m_UnitTypeList.Set(self.app.classifications)
-        self.m_RemoveImgBtn.Enable(False)
 
         if self.unit is not None:
             self.m_UnitNameTxt.SetValue(self.unit.name)
@@ -66,13 +65,6 @@ class AddEditUnitDlg(IdentUI.AddEditUnitDlg):
         if selectedIndex > -1:
             self.threats[selectedIndex][1] = self.m_RangeTxt.GetValue()
 
-    def OnImgListSelect(self, event):
-        imgSel = self.m_ImgList.GetSelections()
-        if len(imgSel) > 0:
-            self.m_RemoveImgBtn.Enable(True)
-        else:
-            self.m_RemoveImgBtn.Enable(False)
-
     def OnAddImgBtnClick(self, event):
         dlg = wx.FileDialog(None, message='Select Image File', wildcard='JPEG Files (*.jpg)|*.jpg',
                             style=wx.FD_MULTIPLE)
@@ -83,5 +75,34 @@ class AddEditUnitDlg(IdentUI.AddEditUnitDlg):
                 self.m_ImgList.Append(img)
 
     def OnRemoveImgBtnClick(self, event):
-        imgSel = self.m_ImgList.GetSelections()
-        pass
+        selIndices = self.m_ImgList.GetSelections()
+        if len(selIndices) > 0:
+            for idx in selIndices:
+                itm = self.m_ImgList.GetItems()[idx]
+                self.m_ImgList.GetItems().remove(itm)
+                imgPath = self.imagePaths[idx]
+                self.imagePaths.remove(imgPath)
+
+    def ValidateData(self):
+        nationality = self.m_NationalityList.GetSelection()
+        unitType = self.m_UnitTypeList.GetSelection()
+
+        # Make sure required data is present
+        if nationality is None:
+            self.DisplayValidationError('A nationality must be selected')
+            return None
+
+        if unitType is None:
+            self.DisplayValidationError('A unit type must be selected')
+            return None
+
+        if len(self.imagePaths) == 0:
+            self.DisplayValidationError('At least one unit image must be added')
+            return None
+
+        # for threat in self.threats:
+
+
+    def DisplayValidationError(self, errMsg):
+        mbx = wx.MessageDialog(None, errMsg, 'Invalid Unit Definition',
+                               style=wx.OK)
