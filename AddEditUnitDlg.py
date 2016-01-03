@@ -87,6 +87,10 @@ class AddEditUnitDlg(IdentUI.AddEditUnitDlg):
                 self.imagePaths.remove(imgPath)
 
     def ValidateData(self):
+        """ Validate the data entered into the forms.
+
+        :return: None, if data is invalid; otherwise, a valid Unit
+        """
         unitName = self.m_UnitNameTxt.GetValue()
         nationality = self.m_NationalityList.GetSelection()
         unitType = self.m_UnitTypeList.GetSelection()
@@ -134,5 +138,9 @@ class AddEditUnitDlg(IdentUI.AddEditUnitDlg):
         return retVal
 
     def DisplayValidationError(self, errMsg):
+        """ Display a data validation error message.
+
+        :param errMsg: The specific message to display.
+        """
         mbx = wx.MessageDialog(None, errMsg, 'Invalid Unit Definition', style=wx.OK)
         mbx.ShowModal()

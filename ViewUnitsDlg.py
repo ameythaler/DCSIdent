@@ -41,6 +41,7 @@ class ViewUnitsDlg(IdentUI.ViewUnitsDlg):
             os.makedirs(self.app.dataDir)
             pass
 
-    def StageAddUnit(self, unit):
-        # self.
-        pass
+    def StageAddedUnit(self, unit):
+        self.units.append(unit)
+        self.stagedUnits.append(unit)
+        # self.m_UnitsList
