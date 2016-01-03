@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ca5165a-3c38-42f3-ac97-731d74dbe330" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AddEditUnitDlg.py" afterPath="$PROJECT_DIR$/AddEditUnitDlg.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unit.py" afterPath="$PROJECT_DIR$/Unit.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DCSIdent.fbp" afterPath="$PROJECT_DIR$/DCSIdent.fbp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/IdentUI.py" afterPath="$PROJECT_DIR$/IdentUI.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ViewUnitsDlg.py" afterPath="$PROJECT_DIR$/ViewUnitsDlg.py" />
     </list>
     <ignored path="DCSIdent.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,11 +27,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.44382545">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="IdentUI.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="IdentUI.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/IdentUI.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="379" column="0" selection-start-line="379" selection-start-column="0" selection-end-line="379" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.18837675">
+                  <caret line="364" column="16" selection-start-line="364" selection-start-column="16" selection-end-line="364" selection-end-column="16" />
                   <folding>
                     <element signature="e#315#324#0" expanded="true" />
                   </folding>
@@ -50,24 +51,12 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Unit.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Unit.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Unit.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.4208417">
+                <state vertical-scroll-proportion="0.0">
                   <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
                   <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ViewUnitsDlg.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/ViewUnitsDlg.py">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-                  <folding>
-                    <element signature="e#0#14#0" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -88,11 +77,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="AddEditUnitDlg.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="AddEditUnitDlg.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/AddEditUnitDlg.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.33867735">
-                  <caret line="112" column="23" selection-start-line="112" selection-start-column="23" selection-end-line="112" selection-end-column="23" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="124" column="30" selection-start-line="124" selection-start-column="30" selection-end-line="124" selection-end-column="30" />
                   <folding>
                     <element signature="e#0#14#0" expanded="true" />
                   </folding>
@@ -106,6 +95,18 @@
                 <state vertical-scroll-proportion="0.0">
                   <caret line="804" column="0" selection-start-line="804" selection-start-column="0" selection-end-line="804" selection-end-column="0" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ViewUnitsDlg.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/ViewUnitsDlg.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.4288577">
+                  <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#0#14#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -132,12 +133,12 @@
         <option value="$PROJECT_DIR$/FormTest.py" />
         <option value="$PROJECT_DIR$/MainFrameDlg.py" />
         <option value="$PROJECT_DIR$/MainFrame.py" />
-        <option value="$PROJECT_DIR$/ViewUnitsDlg.py" />
         <option value="$PROJECT_DIR$/DCSIdent.py" />
         <option value="$PROJECT_DIR$/DCSIdent.fbp" />
-        <option value="$PROJECT_DIR$/IdentUI.py" />
         <option value="$PROJECT_DIR$/Unit.py" />
         <option value="$PROJECT_DIR$/AddEditUnitDlg.py" />
+        <option value="$PROJECT_DIR$/IdentUI.py" />
+        <option value="$PROJECT_DIR$/ViewUnitsDlg.py" />
       </list>
     </option>
   </component>
@@ -821,16 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/IdentUI.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="379" column="0" selection-start-line="379" selection-start-column="0" selection-end-line="379" selection-end-column="0" />
-          <folding>
-            <element signature="e#315#324#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MainFrame.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -841,10 +832,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ViewUnitsDlg.py">
+    <entry file="file://$PROJECT_DIR$/AddEditUnitDlg.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <caret line="124" column="30" selection-start-line="124" selection-start-column="30" selection-end-line="124" selection-end-column="30" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -853,16 +844,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Unit.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4208417">
+        <state vertical-scroll-proportion="0.0">
           <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/AddEditUnitDlg.py">
+    <entry file="file://$PROJECT_DIR$/IdentUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33867735">
-          <caret line="112" column="23" selection-start-line="112" selection-start-column="23" selection-end-line="112" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.18837675">
+          <caret line="364" column="16" selection-start-line="364" selection-start-column="16" selection-end-line="364" selection-end-column="16" />
+          <folding>
+            <element signature="e#315#324#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ViewUnitsDlg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4288577">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>

@@ -138,10 +138,16 @@ class ViewUnitsDlg ( wx.Dialog ):
 		self.m_RemoveBtn = wx.Button( self, wx.ID_ANY, u"Remove", wx.DefaultPosition, wx.DefaultSize, 0 )
 		bSizer6.Add( self.m_RemoveBtn, 0, wx.ALIGN_RIGHT|wx.ALL, 5 )
 
-		bSizer7 = wx.BoxSizer( wx.HORIZONTAL )
+
+		bSizer6.AddSpacer( ( 0, 0), 1, wx.EXPAND, 5 )
 
 		self.m_ClearBtn = wx.Button( self, wx.ID_ANY, u"Clear Cache", wx.DefaultPosition, wx.DefaultSize, 0 )
-		bSizer7.Add( self.m_ClearBtn, 0, wx.ALIGN_BOTTOM|wx.ALL, 5 )
+		bSizer6.Add( self.m_ClearBtn, 0, wx.ALIGN_BOTTOM|wx.ALL|wx.ALIGN_RIGHT, 5 )
+
+		bSizer7 = wx.BoxSizer( wx.HORIZONTAL )
+
+		self.m_CancelBtn = wx.Button( self, wx.ID_ANY, u"Cancel", wx.DefaultPosition, wx.DefaultSize, 0 )
+		bSizer7.Add( self.m_CancelBtn, 0, wx.ALL|wx.ALIGN_BOTTOM, 5 )
 
 		self.m_OkBtn = wx.Button( self, wx.ID_ANY, u"Ok", wx.DefaultPosition, wx.DefaultSize, 0 )
 		bSizer7.Add( self.m_OkBtn, 0, wx.ALIGN_BOTTOM|wx.ALL, 5 )
@@ -165,6 +171,7 @@ class ViewUnitsDlg ( wx.Dialog ):
 		self.m_EditBtn.Bind( wx.EVT_BUTTON, self.OnEditBtnClick )
 		self.m_RemoveBtn.Bind( wx.EVT_BUTTON, self.OnRemoveBtnClick )
 		self.m_ClearBtn.Bind( wx.EVT_BUTTON, self.OnClearBtnClick )
+		self.m_CancelBtn.Bind( wx.EVT_BUTTON, self.OnCancelBtnClick )
 		self.m_OkBtn.Bind( wx.EVT_BUTTON, self.OnOkBtnClick )
 
 	def __del__( self ):
@@ -188,6 +195,9 @@ class ViewUnitsDlg ( wx.Dialog ):
 		event.Skip()
 
 	def OnClearBtnClick( self, event ):
+		event.Skip()
+
+	def OnCancelBtnClick( self, event ):
 		event.Skip()
 
 	def OnOkBtnClick( self, event ):
@@ -375,5 +385,3 @@ class AddEditUnitDlg ( wx.Dialog ):
 
 	def OnOkBtnClick( self, event ):
 		event.Skip()
-
-

@@ -10,6 +10,8 @@ class ViewUnitsDlg(IdentUI.ViewUnitsDlg):
     def __init__(self, parent, app):
         IdentUI.ViewUnitsDlg.__init__(self, parent)
         self.app = app
+        self.units = []
+        self.stagedUnits = []
 
     def OnActivate(self, event):
         pass
@@ -22,7 +24,8 @@ class ViewUnitsDlg(IdentUI.ViewUnitsDlg):
 
     def OnAddBtnClick(self, event):
         dlg = AddEditUnitDlg(None, self.app, None)
-        dlg.ShowModal()
+        # if dlg.ShowModal() == wx.ID_OK:
+
 
     def OnEditBtnClick(self, event):
         pass
@@ -37,3 +40,7 @@ class ViewUnitsDlg(IdentUI.ViewUnitsDlg):
             os.rmdir(self.app.dataDir)
             os.makedirs(self.app.dataDir)
             pass
+
+    def StageAddUnit(self, unit):
+        # self.
+        pass
