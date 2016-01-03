@@ -3,11 +3,25 @@ class Unit:
         self.name = name
         self.nationality = nationality
         self.classification = classification
-        self.threats = []
+        self.threats = []  # array of [threat type, threat range]
         self.images = []
 
-    def AddThreat(self, threat, threatRange):
-        self.threats[threat] = threatRange
+    def AddThreat(self, threat):
+        self.threats.append(threat)
+
+    def ClearThreats(self):
+        self.threats = []
+
+    def RemoveThreat(self, threat):
+        remIdx = -1
+        idx = 0
+        for curThreat in self.threats:
+            if curThreat[0] == threat:
+                remIdx = idx
+                break
+            idx += 1
+        if remIdx != -1:
+            self.threats.remove(remIdx)
 
     def AddImage(self, image):
         self.images.append(image)

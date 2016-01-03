@@ -18,14 +18,17 @@ class AddEditUnitDlg(IdentUI.AddEditUnitDlg):
         self.m_UnitTypeList.Set(self.app.classifications)
 
         if self.unit is not None:
-            self.m_UnitNameTxt.SetValue(self.unit.name)
-            # for threat in self.unit.threats:
+            # TODO: Handle editing existing units
+            pass
 
     def OnClose(self, event):
         self.EndModal(wx.ID_CANCEL)
 
     def OnOkBtnClick(self, event):
-        pass
+        newUnit = self.ValidateData()
+        if newUnit is not None:
+            self.unit = newUnit
+            self.EndModal(wx.ID_OK)
 
     def OnCancelBtnClick(self, event):
         self.EndModal(wx.ID_CANCEL)
@@ -84,10 +87,15 @@ class AddEditUnitDlg(IdentUI.AddEditUnitDlg):
                 self.imagePaths.remove(imgPath)
 
     def ValidateData(self):
+        unitName = self.m_UnitNameTxt.GetValue()
         nationality = self.m_NationalityList.GetSelection()
         unitType = self.m_UnitTypeList.GetSelection()
 
         # Make sure required data is present
+        if unitName is None or unitName == '' or unitName == ' ':
+            self.DisplayValidationError('A unit name must be specified')
+            return None
+
         if nationality is None:
             self.DisplayValidationError('A nationality must be selected')
             return None
@@ -100,9 +108,31 @@ class AddEditUnitDlg(IdentUI.AddEditUnitDlg):
             self.DisplayValidationError('At least one unit image must be added')
             return None
 
-        # for threat in self.threats:
+        for threat in self.threats:
+            if threat[1] == '':
+                rangeTxt = self.m_RangeTxt.GetValue()
+                if rangeTxt is not None and rangeTxt != '':
+                    self.DisplayValidationError('Threats must have ranges specified.\
+                     \'Enter\' must be pressed after entering a range to store it.')
+                else:
+                    self.DisplayValidationError('Threats must have ranges specified')
+                return None
 
+        # If no threats are specified, make sure it's intentional.
+        if len(self.threats) == 0:
+            mbx = wx.MessageDialog(None, 'No threats specified for selected unit. Continue and create unarmed unit?',
+                                   'Warning', style=wx.YES | wx.NO | wx.CANCEL)
+            if mbx.ShowModal() != wx.YES:
+                return None
+
+        # Unit data is valid, create and return new unit object based on this data.
+        retVal = Unit(unitName, nationality, unitType)
+        for img in self.imagePaths:
+            retVal.AddImage(img[1])
+        for threat in self.threats:
+            retVal.AddThreat(threat)
+        return retVal
 
     def DisplayValidationError(self, errMsg):
-        mbx = wx.MessageDialog(None, errMsg, 'Invalid Unit Definition',
-                               style=wx.OK)
+        mbx = wx.MessageDialog(None, errMsg, 'Invalid Unit Definition', style=wx.OK)
+        mbx.ShowModal()
