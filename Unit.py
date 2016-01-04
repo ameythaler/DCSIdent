@@ -12,14 +12,15 @@ class Unit:
     def ClearThreats(self):
         self.threats = []
 
-    def RemoveThreat(self, threat):
-        remIdx = -1
+    def FindThreat(self, threat):
         idx = 0
         for curThreat in self.threats:
             if curThreat[0] == threat:
-                remIdx = idx
-                break
-            idx += 1
+                return idx
+        return -1
+
+    def RemoveThreat(self, threat):
+        remIdx = self.FindThreat()
         if remIdx != -1:
             self.threats.remove(remIdx)
 

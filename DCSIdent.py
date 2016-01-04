@@ -7,7 +7,10 @@ import Unit
 class IdentApplication:
     def __init__(self):
         self.wxApp = wx.App(False)
-        self.dataDir = os.path.expanduser('~/AppData/Roaming/DCSIdent')
+        if os.name == 'posix':
+            self.dataDir = os.path.expanduser('~/Library/Caches/DCSIdent')
+        else:
+            self.dataDir = os.path.expanduser('~/AppData/Roaming/DCSIdent')
         if not os.path.exists(self.dataDir):
             os.makedirs(self.dataDir)
         self.units = []

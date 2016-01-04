@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ca5165a-3c38-42f3-ac97-731d74dbe330" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AddEditUnitDlg.py" afterPath="$PROJECT_DIR$/AddEditUnitDlg.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/DCSIdent.py" afterPath="$PROJECT_DIR$/DCSIdent.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Unit.py" afterPath="$PROJECT_DIR$/Unit.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ViewUnitsDlg.py" afterPath="$PROJECT_DIR$/ViewUnitsDlg.py" />
     </list>
     <ignored path="DCSIdent.iws" />
@@ -23,7 +24,7 @@
     <favorites_list name="DCSIdent" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.44382545">
+    <splitter split-orientation="horizontal" split-proportion="0.47168058">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="IdentUI.py" pinned="false" current-in-tab="false">
@@ -38,11 +39,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="DCSIdent.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="DCSIdent.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/DCSIdent.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.15831663">
+                  <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
                   <folding>
                     <element signature="e#0#9#0" expanded="true" />
                   </folding>
@@ -50,11 +51,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Unit.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Unit.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Unit.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.4208417">
-                  <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
                   <folding />
                 </state>
               </provider>
@@ -91,8 +92,8 @@
           <file leaf-file-name="ViewUnitsDlg.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/ViewUnitsDlg.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.81963927">
-                  <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+                <state vertical-scroll-proportion="0.39278558">
+                  <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
                   <folding>
                     <element signature="e#0#14#0" expanded="true" />
                   </folding>
@@ -122,12 +123,12 @@
         <option value="$PROJECT_DIR$/FormTest.py" />
         <option value="$PROJECT_DIR$/MainFrameDlg.py" />
         <option value="$PROJECT_DIR$/MainFrame.py" />
-        <option value="$PROJECT_DIR$/DCSIdent.py" />
         <option value="$PROJECT_DIR$/DCSIdent.fbp" />
-        <option value="$PROJECT_DIR$/Unit.py" />
         <option value="$PROJECT_DIR$/IdentUI.py" />
         <option value="$PROJECT_DIR$/AddEditUnitDlg.py" />
+        <option value="$PROJECT_DIR$/Unit.py" />
         <option value="$PROJECT_DIR$/ViewUnitsDlg.py" />
+        <option value="$PROJECT_DIR$/DCSIdent.py" />
       </list>
     </option>
   </component>
@@ -454,7 +455,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="18" />
+      <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -821,24 +822,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DCSIdent.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Unit.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4208417">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/AddEditUnitDlg.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -849,10 +832,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Unit.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="15" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DCSIdent.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15831663">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ViewUnitsDlg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.81963927">
-          <caret line="46" column="8" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.39278558">
+          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>

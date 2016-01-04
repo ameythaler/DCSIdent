@@ -6,7 +6,6 @@ from AddEditUnitDlg import AddEditUnitDlg
 
 
 class ViewUnitsDlg(IdentUI.ViewUnitsDlg):
-
     def __init__(self, parent, app):
         IdentUI.ViewUnitsDlg.__init__(self, parent)
         self.app = app
@@ -24,8 +23,8 @@ class ViewUnitsDlg(IdentUI.ViewUnitsDlg):
 
     def OnAddBtnClick(self, event):
         dlg = AddEditUnitDlg(None, self.app, None)
-        # if dlg.ShowModal() == wx.ID_OK:
-
+        if dlg.ShowModal() == wx.ID_OK:
+            self.StageAddedUnit(dlg.unit)
 
     def OnEditBtnClick(self, event):
         pass
@@ -44,4 +43,4 @@ class ViewUnitsDlg(IdentUI.ViewUnitsDlg):
     def StageAddedUnit(self, unit):
         self.units.append(unit)
         self.stagedUnits.append(unit)
-        # self.m_UnitsList
+        self.m_UnitsList.Append(unit.name)
